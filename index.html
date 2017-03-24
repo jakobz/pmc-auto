@@ -35,8 +35,7 @@ document.querySelectorAll('.nested-data.activities-container .table-right-part')
    let rightDays = part.querySelectorAll('.table-week.last-week .table-activity-cell.cell input:not(.not-workday)');
    rightDays.forEach((rightDay, idx) => {
      rightDay.value = leftDays[Math.min(idx, leftDays.length - 1)].value;
-     var event = new Event('blur');
-     rightDay.dispatchEvent(event);
+     rightDay.dispatchEvent(new Event('blur'));
    })
 })
 </pre>
